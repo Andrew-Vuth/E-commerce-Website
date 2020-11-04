@@ -209,6 +209,9 @@ a {
 #product-menu {
   grid-area: product;
   margin-top: -1em;
+  margin-bottom: 1em;
+  display: flex;
+  flex-direction: column;
 }
 .product {
   position: relative;
@@ -287,6 +290,12 @@ a {
 .buy-item .btn img {
   width: 60%;
   margin-right: 1em;
+}
+.learn-more {
+  margin-top: 1em;
+  background-color: rgb(18, 189, 18);
+  width: 20%;
+  align-self: center;
 }
 
 @keyframes slide {
