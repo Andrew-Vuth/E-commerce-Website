@@ -2,7 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Montserrat";
+  font-family: "Montserrat", sans-serif;
 }
 body,
 html {
@@ -251,6 +251,26 @@ a {
   background-color: #ec524b;
   transform: rotate(4deg);
 }
+.buy-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.cart-btn {
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 55%;
+}
+.buy-item .btn:hover {
+  background: #4cbbb9;
+  color: white;
+}
+.buy-item .btn img {
+  width: 60%;
+  margin-right: 1em;
+}
 
 .product:hover {
   border: none;
@@ -268,29 +288,12 @@ a {
   font-size: 2.3vmin;
   margin-bottom: 5em;
 }
-.buy-item {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
+
 .product-info button {
   color: black;
   padding: 0.5em 2.5em;
 }
-.buy-item .btn {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  width: 55%;
-}
-.buy-item .btn:hover {
-  background: #4cbbb9;
-  color: white;
-}
-.buy-item .btn img {
-  width: 60%;
-  margin-right: 1em;
-}
+
 .learn-more {
   margin-top: 1em;
   background-color: rgb(18, 189, 18);
@@ -298,6 +301,156 @@ a {
   align-self: center;
 }
 
+/* Product Page Style Section */
+.product-display {
+  margin: 0 3em;
+}
+.highlight {
+  position: relative;
+}
+.highlight:after {
+  content: "-20%";
+  background-color: #ec524b;
+  padding: 0.5em;
+  font-size: 1.2em;
+  color: #fff;
+  position: absolute;
+  top: 0;
+  right: 10px;
+}
+.highlight img {
+  display: block;
+  margin: 0 auto;
+  width: 50%;
+}
+.other-options {
+  display: flex;
+  justify-content: center;
+}
+.other-options img {
+  width: 15%;
+  border: 5px solid #f3f3f3;
+  margin: 0.8em;
+}
+.product-detail {
+  margin: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.product-detail .cart-btn {
+  margin: 3em 0 1.5em 0;
+  font-size: 1.2em;
+  width: 50%;
+  transform-origin: bottom left;
+  transform: scale(0.7);
+}
+.product-detail span {
+  padding: 0.7em;
+  border-radius: 10px;
+  margin: 0.2em;
+  font-size: 0.8em;
+  color: #fff;
+}
+.product-detail span:first-child {
+  background-color: #2572b9;
+}
+.product-detail span:nth-child(2) {
+  background-color: #4cbbb9;
+}
+.comment-section {
+  margin: 1em;
+}
+.comment-section h3 {
+  margin-bottom: 1em;
+}
+.user-comment {
+  padding: 2em;
+  border: 5px solid #f3f3f3;
+}
+.user {
+  display: flex;
+  align-items: center;
+}
+.user .avatar {
+  position: relative;
+  width: 4em;
+  height: 4em;
+  border-radius: 50%;
+  background-color: #f3f3f3;
+  margin-right: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.user .avatar::before {
+  content: "";
+  position: absolute;
+  top: 25%;
+  background: rgb(184, 183, 183);
+
+  width: 1.8em;
+  height: 1.8em;
+  border-radius: 50%;
+  z-index: 1;
+}
+.user .avatar::after {
+  content: "";
+  position: absolute;
+  bottom: -40%;
+  background: rgb(170, 167, 167);
+  width: 3em;
+  height: 3em;
+  border-radius: 50%;
+}
+.user-info p {
+  margin-top: 0.5em;
+  font-size: 1.8vmin;
+}
+.comment {
+  margin: 1.5em 0;
+}
+.comment-submit {
+  margin-top: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.comment-submit label {
+  background-color: white;
+  font-weight: 600;
+  padding: 0 0.5em;
+  margin-bottom: -1.5em;
+  margin-left: 2em;
+  z-index: 1;
+  width: fit-content;
+}
+.comment-submit textarea {
+  resize: none;
+  padding: 1.5em;
+}
+.submit-btn {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+  align-self: flex-end;
+}
+.comment-submit .btn {
+  margin: 0.5em;
+}
+.comment-submit .btn i {
+  margin-right: 0.5em;
+  transform: scale(-1, 1);
+  font-size: 1.2em;
+}
+.comment-submit .btn:first-child {
+  background-color: rgb(18, 189, 18);
+}
+.comment-submit .btn:last-child {
+  background-color: #9e9c9c;
+  /* color: #000; */
+}
 @keyframes slide {
   from {
     opacity: 0;
@@ -374,5 +527,19 @@ a {
   }
   .product-info p {
     margin-bottom: 2em;
+  }
+
+  /* Product Page's Style */
+
+  .detail {
+    display: flex;
+    flex-direction: row;
+
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    margin: 1em 1em;
+  }
+  .product-display {
+    margin: 1em 0;
+    border-right: 5px solid #f3f3f3;
   }
 }
