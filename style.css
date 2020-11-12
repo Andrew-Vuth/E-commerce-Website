@@ -1,3 +1,7 @@
+:root {
+  --green: #28df99;
+  --lightcyan: #4cbbb9;
+}
 * {
   padding: 0;
   margin: 0;
@@ -204,7 +208,7 @@ a {
 }
 
 #side div:hover > p {
-  color: #4cbbb9;
+  color: var(--lightcyan);
 }
 #product-menu {
   grid-area: product;
@@ -214,6 +218,7 @@ a {
   flex-direction: column;
 }
 .product {
+  color: #333335;
   position: relative;
   border-radius: 5px;
   margin: 1em;
@@ -264,14 +269,13 @@ a {
   width: 55%;
 }
 .buy-item .btn:hover {
-  background: #4cbbb9;
+  background: var(--lightcyan);
   color: white;
 }
 .buy-item .btn img {
   width: 60%;
   margin-right: 1em;
 }
-
 .product:hover {
   border: none;
   transform: translateY(-10px);
@@ -279,7 +283,7 @@ a {
   transition: 0.3s ease-in;
 }
 .product:hover .buy-item h2 {
-  color: #4cbbb9;
+  color: var(--lightcyan);
 }
 .product-info {
   padding: 1em;
@@ -296,8 +300,7 @@ a {
 
 .learn-more {
   margin-top: 1em;
-  background-color: rgb(18, 189, 18);
-  width: 20%;
+  background-color: var(--green);
   align-self: center;
 }
 
@@ -445,7 +448,7 @@ a {
   font-size: 1.2em;
 }
 .comment-submit .btn:first-child {
-  background-color: rgb(18, 189, 18);
+  background-color: var(--green);
 }
 .comment-submit .btn:last-child {
   background-color: #9e9c9c;
