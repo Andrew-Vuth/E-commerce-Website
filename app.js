@@ -1,4 +1,0 @@
-function idk(da) {
-    dasdasd
-
-};
